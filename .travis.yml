@@ -3,10 +3,10 @@ services:
    - docker
 
 before_install:
-   - docker build -t amitpandit09/sampleimage -f Dockerfile . 
+   - docker build -t amitpandit09/sampleimaged -f Dockerfile . 
 
 script:
-   - docker run amitpandit09/sampleimage npm run test -- --coverage
+   - docker run amitpandit09/sampleimaged npm run test -- --coverage
 deploy:
    provider: elasticbeanstalk
    region: "us-east-1"
