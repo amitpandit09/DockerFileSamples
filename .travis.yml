@@ -7,3 +7,15 @@ before_install:
 
 script:
    - docker run amitpandit09/sampleimage npm run test -- --coverage
+deploy:
+   provider: elasticbeanstalk
+   region: "us-east-1"
+   app: "docker-app"
+   env: "DockerApp-env"
+   bucket_name: "elasticbeanstalk-us-east-1-729254061718"
+   bucket_path: "docker-app"
+   on: 
+     branch:master
+   access_key_id: $AWS_ACCESS_KEY
+   secret_access_key: 
+     secure: "$AWS_SECRET_KEY"
