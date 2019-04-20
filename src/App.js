@@ -10,8 +10,8 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <p>
             Hello amit pandit's docker app
-            Hello amit's docker app
-          </p>
+            My feature branch 
+         </p>
           <a
             className="App-link"
             href="https://reactjs.org"
